@@ -1,4 +1,4 @@
-# ReactJS-Component
+# ReactJS-Demo
 <p>React.js is a JavaScript library for building user interfaces</p>
 
 <p>
