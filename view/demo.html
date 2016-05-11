@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+<script  data-min='../require.config.js' src='../JS/require.js'></script>
+<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="../css/main.css" type="text/css"/>
+<title>Anguler JS Demo</title>
+<script>
+require(['../require.config'],function($){
+   require(['angulardemo']);
+ });
+</script>
+</head>
+<body >
+    <div class="container div-border" data-ng-controller="mainController">
+          <h1>Root Controller</h1>
+             <p>Emit Message  From Child: {{message}}</p>
+               <p>Emit Message From Parent : {{message2}}</p>
+         <input ng-model="msg1"  class="form-control">
+             <button ng-click="handleClick(msg1);" class="button">BroadCast Message from top to bottom</button>
+        
+        <div  class="form-horizontal div-border" data-ng-controller="parentController">
+           <h1>Parent Controller</h1>
+           
+             <input ng-model="msg2" class="form-control">
+             <button ng-click="handleClick1(msg2);" class="button">Emit and broadcast message from center</button>
+           
+             <p>Emit Message : {{message}}</p>
+              <p>Broadcast Message : {{message1}}</p>
+        
+        <div class="div-border" data-ng-controller="childController">
+           <h1>Child Controller</h1>
+             <input ng-model="msg" class="form-control">
+             <button ng-click="handleClick2(msg);" class="button">Emit message from bottom to top</button>
+             <p>Broadcast Message : {{message1}}</p>
+             <p>Broadcast Message From Parent : {{message2}}</p>
+     </div>
+     </div>
+     <div>
+</body>
+</html>

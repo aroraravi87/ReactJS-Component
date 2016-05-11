@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+<script  data-min='../require.config.js' src='../JS/require.js'></script>
+<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+<script>
+require(['../require.config'],function($){
+   require(['angulardemo']);
+ });
+</script>
+</head>
+<body >
+    <div class="container" data-ng-controller="mainController">
+        <div ng-switch on="data.switch" class="form-horizontal" data-ng-controller="divController">
+            <div data-ng-switch-when="1" class="form-group">Section 1</div>
+            <div data-ng-switch-when="2" class="form-group">Section 2</div>
+            <div data-ng-switch-when="3" class="form-group">Section 3</div>
+        </div>
+        
+        <input type="text" class="form-control" ng-model="nameSearch"/>
+        <table class="table table-striped" data-ng-controller="tableController">
+            <th>#</th>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Customer Email Id</th>
+            <tr ng-repeat="item in data |limitTo: 5| filter:nameSearch" ng-if= "data.display" >
+                <td>{{($index+1)}}</td>
+                <td>{{item.Id}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.EmailID}}</td>
+            <tr>
+        </table>     
+     </div>
+</body>
+</html>

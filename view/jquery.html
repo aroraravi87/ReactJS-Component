@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script  data-min='../require.config.js' src='../JS/require.js'></script>
+<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="../css/main.css" type="text/css"/>
+<title>Jquery Sample</title>
+</head>
+<body>
+<script>
+require(['../require.config'],function($){
+	require(['jqueryCode']);
+});
+</script>
+<div id="container" class="container">
+    <div class="panel panel-default col-sm-12">
+        <div class="panel-heading panel-title col-sm-12">
+       <div class="col-sm-3">
+           </div>
+            <div class="col-sm-6">
+           </div>
+            <div class="col-sm-3">
+                 <input type="button" class="btn btn-danger" value="Add Record"/>
+                 <input type="button" class="btn btn-warning " value="Show Record"/>
+           </div>
+         
+         
+        </div>
+         <div class="panel-body col-sm-12 grStyle" id="datalist" >
+           
+            
+        </div>
+        <div class="panel-footer col-sm-12">
+            <div class="col-sm-3">
+           </div>
+           <div class="col-sm-6">
+           </div>
+           <div class="col-sm-3">
+            <select id="ddlPager"></select>
+           </div>
+           
+        </div>
+     </div>
+   
+</div>
+</body>
+</html>

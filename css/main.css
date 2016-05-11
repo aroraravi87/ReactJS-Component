@@ -1,0 +1,101 @@
+body,html{ padding:0px;margin:0px;background-color: black}
+
+h1, h2, h3, h4, h5, h6, p,b{
+	color: silver
+}
+
+
+
+.dataPanel
+{
+	position: absolute;
+	top:30px;
+	left:400px;
+	width:600px;
+    height: 600px;	
+	 float:right;
+	 overflow:hidden;
+	 border: 0.5px solid dimgray;
+	 word-wrap: break-word;
+}
+
+.floatleft
+{
+float: left;
+display:inline-block;
+margin:15 0 0 10;		
+}
+.floatright
+{
+float: right;
+display:inline-block;	
+margin:15 200 0 0;	
+}
+
+.inner
+{
+	width:400px;
+	height: 400px;
+	position: relative;
+	top:0px;
+	left:0px;
+	border: 3px solid red;
+}
+
+.container{
+	margin: 20px;
+	padding: 20px
+}
+.clear
+{
+	clear:both;
+}
+
+ul li
+{
+	list-style-type: none;
+	padding: 5px;
+	color:silver;
+	cursor: pointer;
+	
+}
+
+ul>li>a
+{
+		color:silver;
+		font-weight:5px;
+		font-family:arial;
+		cursor: pointer;
+		text-decoration: none;
+		
+}
+
+
+
+.main-css-loaded {
+	height: 1px;
+}
+
+.testClass{
+    color:green;
+    font-weight: bold;
+    
+}
+
+.div-border
+{
+border:2px solid #428bca;
+padding:5px;
+}
+
+.borderstyle
+{
+border: 1px solid #ccc;
+}
+
+.grStyle{
+	width:100%;
+	max-height:500px;
+	height:500px;
+	overflow: scroll;
+}
